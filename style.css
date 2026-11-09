@@ -10,3 +10,25 @@
 .wizard-steps{font-size:12px;letter-spacing:.18em;color:var(--muted);margin-bottom:20px}.wizard-panel h3{margin:0 0 16px}.wizard-panel h3 small{font-size:12px;color:var(--muted);font-weight:400}.wizard-actions{display:flex;justify-content:space-between;gap:12px;margin-top:24px}.mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.mode-card{min-height:130px;background:var(--panel2);border:1px solid var(--border);border-radius:16px;padding:20px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:10px;font-size:24px;color:var(--accent);cursor:pointer}.mode-card strong{font-size:17px;color:var(--text)}.mode-card small{font-size:12px;color:var(--muted)}.mode-card.selected,.progress-option.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}.progress-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-height:440px;overflow-y:auto;margin-bottom:16px}.progress-option{width:100%;background:var(--panel2);border:1px solid var(--border);border-radius:13px;padding:15px;color:var(--text);text-align:left;cursor:pointer}.progress-option-top{display:flex;justify-content:space-between;gap:10px;margin-bottom:10px}.progress-option .progress{height:6px;margin:0;background:var(--border);border-radius:5px;overflow:hidden}.progress-option .progress div{height:100%;background:var(--accent)}.progress-option small{display:block;color:var(--muted);margin-top:8px}.past-row{display:flex;align-items:center;gap:14px;justify-content:space-between;border-bottom:1px solid var(--border);padding:14px 0;flex-wrap:wrap}.past-row small{color:var(--muted)}#pastExamList{display:grid;gap:10px;margin-bottom:15px}#certOptions{margin-bottom:16px}@media(max-width:600px){.progress-list{grid-template-columns:1fr}.mode-card{padding:15px;min-height:115px}}
 
 .source-links{padding:12px 16px;border:1px solid var(--border);border-radius:12px;margin:12px 0}.source-links p{margin:8px 0;line-height:1.5}.source-links a{color:var(--accent)}#sourcePreview .past-row{display:flex;flex-direction:column;gap:8px;margin:10px 0}#sourcePreview input,#sourcePreview textarea{width:100%}
+
+/* Mobile navigation: show full labels in a slide-out menu instead of truncating them. */
+.mobile-menu-button{display:none}
+@media(max-width:900px){
+  .mobile-menu-button{display:block;position:fixed;top:12px;right:12px;z-index:101;background:var(--panel2);color:var(--text);border:1px solid var(--border);border-radius:11px;padding:10px 14px;font-size:14px;font-weight:700;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+  .sidebar{position:fixed!important;top:0!important;left:0!important;right:auto!important;bottom:0!important;width:min(310px,82vw)!important;height:100dvh!important;z-index:100!important;display:flex!important;flex-direction:column!important;gap:20px!important;padding:65px 15px 24px!important;overflow-y:auto!important;border-top:0!important;border-right:1px solid var(--border)!important;transform:translateX(-110%);transition:transform .22s ease;box-shadow:8px 0 35px rgba(0,0,0,.25)}
+  body.mobile-nav-open .sidebar{transform:translateX(0)}
+  .sidebar .logo,.sidebar .logo span,.sidebar .side-label,.sidebar .side-bottom, .sidebar nav span{display:block!important}
+  .sidebar nav{display:grid!important;grid-template-columns:1fr!important;gap:6px!important;overflow:visible!important}
+  .sidebar nav button{display:flex!important;justify-content:flex-start!important;align-items:center!important;gap:12px!important;white-space:normal!important;overflow-wrap:anywhere!important;text-align:left!important;width:100%!important;padding:13px!important;font-size:15px!important;line-height:1.5!important}
+  .sidebar nav button span{font-size:14px!important}
+  .main{padding-top:65px!important;padding-bottom:50px!important}
+}
+
+/* IT passport guided course */
+#itcoach .segment{flex-wrap:wrap}#itcoach .segment button{flex:1 1 145px}
+.it-topic-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(128,128,128,.2)}
+.it-topic-row small{display:block;opacity:.7;margin-top:4px}.it-topic-row strong{white-space:nowrap}
+.it-choices{display:grid;gap:10px;margin:16px 0}.it-choices button{text-align:left;padding:13px;border:1px solid rgba(130,130,150,.35);border-radius:12px;background:rgba(130,130,150,.12);color:inherit;cursor:pointer}
+.it-choices button:disabled{opacity:.65;cursor:default}.it-choices button.it-picked{outline:2px solid var(--accent,#9286ef);opacity:1}
+.it-note{line-height:1.8;white-space:pre-line}.it-pill{font-size:.85rem;opacity:.8}
+#itLessonFeedback{line-height:1.8;margin:12px 0}

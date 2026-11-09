@@ -1,6 +1,6 @@
 // Cache only same-origin app shell. Remote PDF resources are not cached.
-const CACHE = 'studyapp-shell-v1';
-const SHELL = ['./', './index.html', './style.css', './script.js', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
+const CACHE = 'studyapp-shell-v10';
+const SHELL = ['./', './index.html', './style.css', './script.js', './itcoach.js', './itbank.js', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
 });
